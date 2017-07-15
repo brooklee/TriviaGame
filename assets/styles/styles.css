@@ -1,0 +1,26 @@
+body{
+	text-align: center;
+	font-family: 'Poiret One', sans-serif;
+	background-color:#8f16cc;
+	color: white;
+}
+
+h1 {
+	font-family: 'Poiret One', sans-serif;
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+button {
+	color: white;
+	border-radius: 20px;
+	background-color: #8f16cc;
+	font-size: 2em;
+}
+
+.radio {
+	display: block;
+}
