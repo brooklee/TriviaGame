@@ -109,5 +109,5 @@ $(function() {
 
   //-----------------Check awnsers------------------------
 
-  if (correctAnswer === true)
+  //if (correctAnswer === true)
 
