@@ -24,3 +24,8 @@ button {
 .radio {
 	display: block;
 }
+
+.answers {
+	display: block;
+	color: orange;
+}
