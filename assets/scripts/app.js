@@ -32,83 +32,77 @@ $(function() {
     var timer = 10;
     var timerId;
 
-    var correct = 0;
-    var wrong = 0;
+   var selections = [];//Holds Selections
+    var counter = 0;
+    var score = $('#score');
 
 //----------------Create trivia questions in Div---------------
 //start Button  populate
+  //Q1
   $("#startButton").on('click', function populate() {
 var testDiv = document.createElement("div");
-testDiv.innerHTML = '<h3>' + trivia[0].question + '</h3>'+ '<div> <form> <p> <input type="radio">'
-     + trivia[0].answers[0] +'</p>'
-     + '<p><input type="radio">' + trivia[0].answers[1] +'</p>'
-     + '<p><input type="radio">' +trivia[0].answers[2] +'</p>'
-     + '<p><input type="radio">' +trivia[0].answers[3] +'</p>'
-     + '<p></form> </div>';
-var questionsDiv = document.getElementById('questions');
-questionsDiv.appendChild(testDiv);
-
+for (var i = 0; i < trivia.length; i++) {
+  testDiv.innerHTML = '<h3>' + trivia[0].question + '</h3>'+ '<div> <form> <p> <input type="radio" name ="answer" value="1" checked>'
+       + trivia[0].answers[0] +'</p>'
+       + '<p><input type="radio" name ="answer" value="2">' + trivia[0].answers[1] +'</p>'
+       + '<p><input type="radio" name ="answer" value="3">' +trivia[0].answers[2] +'</p>'
+       + '<p><input type="radio" name ="answer" value="4">' +trivia[0].answers[3] +'</p>'
+       + '<p></form> </div>';
+  var questionsDiv = document.getElementById('questions');
+  questionsDiv.appendChild(testDiv);
+  }
 });
 
+  //Q1
   $("#startButton").on('click', function populate() {
 var testDiv = document.createElement("div");
-testDiv.innerHTML = trivia[1].question + '<div> <form> <input type="radio">'
-     + trivia[1].answers[0]
-     + '<input type="radio">' + trivia[1].answers[1]
-     + '<input type="radio">' +trivia[1].answers[2]
-     + '<input type="radio">' +trivia[1].answers[3]
-     + '</form> </div>';
-var questionsDiv = document.getElementById('questions');
-questionsDiv.appendChild(testDiv);
-}); 
-
-  $("#startButton").on('click', function populate() {
-var testDiv = document.createElement("div");
-testDiv.innerHTML = trivia[2].question + '<div> <form> <input type="radio">'
-     + trivia[2].answers[0]
-     + '<input type="radio">' + trivia[2].answers[1]
-     + '<input type="radio">' +trivia[2].answers[2]
-     + '<input type="radio">' +trivia[2].answers[3]
-     + '</form> </div>';
-var questionsDiv = document.getElementById('questions');
-questionsDiv.appendChild(testDiv);
+for (var i = 0; i < trivia.length; i++) {
+  testDiv.innerHTML = '<h3>' + trivia[1].question + '</h3>'+ '<div> <form> <p> <input type="radio" name ="answer" value="1" checked>'
+       + trivia[1].answers[0] +'</p>'
+       + '<p><input type="radio" name ="answer" value="2">' + trivia[1].answers[1] +'</p>'
+       + '<p><input type="radio" name ="answer" value="3">' +trivia[1].answers[2] +'</p>'
+       + '<p><input type="radio" name ="answer" value="4">' +trivia[1].answers[3] +'</p>'
+       + '<p></form> </div>';
+  var questionsDiv = document.getElementById('questions');
+  questionsDiv.appendChild(testDiv);
+  }
 });
 
+  //Q1
   $("#startButton").on('click', function populate() {
 var testDiv = document.createElement("div");
-testDiv.innerHTML = trivia[3].question + '<div> <form> <input type="radio">'
-     + trivia[3].answers[0]
-     + '<input type="radio">' + trivia[3].answers[1]
-     + '<input type="radio">' +trivia[3].answers[2]
-     + '<input type="radio">' +trivia[3].answers[3]
-     + '</form> </div>';
-var questionsDiv = document.getElementById('questions');
-questionsDiv.appendChild(testDiv);
+for (var i = 0; i < trivia.length; i++) {
+  testDiv.innerHTML = '<h3>' + trivia[2].question + '</h3>'+ '<div> <form> <p> <input type="radio" name ="answer" value="1" checked>'
+       + trivia[2].answers[0] +'</p>'
+       + '<p><input type="radio" name ="answer" value="2">' + trivia[2].answers[1] +'</p>'
+       + '<p><input type="radio" name ="answer" value="3">' +trivia[2].answers[2] +'</p>'
+       + '<p><input type="radio" name ="answer" value="4">' +trivia[2].answers[3] +'</p>'
+       + '<p></form> </div>';
+  var questionsDiv = document.getElementById('questions');
+  questionsDiv.appendChild(testDiv);
+  }
 });
+
+  //Q1
+  $("#startButton").on('click', function populate() {
+var testDiv = document.createElement("div");
+for (var i = 0; i < trivia.length; i++) {
+  testDiv.innerHTML = '<h3>' + trivia[3].question + '</h3>'+ '<div> <form> <p> <input type="radio" name ="answer" value="1" checked>'
+       + trivia[3].answers[0] +'</p>'
+       + '<p><input type="radio" name ="answer" value="2">' + trivia[3].answers[1] +'</p>'
+       + '<p><input type="radio" name ="answer" value="3">' +trivia[3].answers[2] +'</p>'
+       + '<p><input type="radio" name ="answer" value="4">' +trivia[3].answers[3] +'</p>'
+       + '<p></form> </div>';
+  var questionsDiv = document.getElementById('questions');
+  questionsDiv.appendChild(testDiv);
+  }
+});
+
+ 
+  
 
 //add radio buttons
-function createRadios(index) {
-    var radioList = $('<div>');
-    var item;
-    var input = '';
-    for (var i = 0; i < trivia[index].answers.length; i++) {
-      item = $('<div>');
-      input = '<input type="radio" name="answer" value=' + i + ' />';
-      input += trivia[index].answers[i];
-      item.append(input);
-      radioList.append(item);
-    }
-    return radioList;
-  }
-/*$(function() {
-    $( "#radio" ).push('<input type="radio" />');
-  });*/
-
-//createDiv
-
-//createInput
-
-//inputType=radioBtn
+  //Come back and loop the populate
 
   
 
@@ -136,6 +130,7 @@ function createRadios(index) {
       if (timer === 0) {
         stop();
         alert("times up")
+        $('#questions').fadeOut()
       }
     }
 
@@ -144,11 +139,36 @@ function createRadios(index) {
       clearInterval(timerId);
     };
 
-  });
+
 
     
 
   //-----------------Check awnsers------------------------
+  //Pushusers ansers to an array
+  function choose() {
+   selections[counter] = $("input[type='radio'][name='answer']:checked").val();
+  }
+  choose();
 
-  //if (correctAnswer === true)
+  function displayScore() {
+    var score = $('<p>',{id: 'question'});
+    
+    var numCorrect = 0;
+    for (var i = 0; i < selections.length; i++) {
+      if (selections[i] === trivia[i].correctAnswer) {
+        numCorrect++;
+      }
+    }
+    
+    score.append('You got ' + numCorrect + ' questions out of ' +
+                 trivia.length + ' right!!!');
+    return score;
+  }
+  displayScore();
+
+  var scoreElem = displayScore();
+        score.append(scoreElem).fadeIn();
+
+
+  });
 
