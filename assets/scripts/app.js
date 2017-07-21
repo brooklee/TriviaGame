@@ -35,7 +35,7 @@ var timer = 10;
   $("#startButton").on('click', function populate() {
     var testDiv = document.createElement("div");
     for (var i = 0; i < trivia.length; i++) {
-      testDiv.innerHTML += '<h3>' + trivia[i].question + '</h3>' + '<div><form><p><input type="radio" name="answer" value="right">' +
+      testDiv.innerHTML += '<h3>' + trivia[i].question + '</h3>' + '<div><form><p><input type="radio" name="answer" value="0">' +
       trivia[i].answers[0] + '</p>' +
         '<p><input type="radio" name ="answer" value="2">' + trivia[i].answers[1] + '</p>' +
         '<p><input type="radio" name ="answer" value="3">' + trivia[i].answers[2] + '</p>' +
@@ -93,7 +93,7 @@ var timer = 10;
 
 
   function displayScore() {
-    var score = $('<p>',{id: 'score'});
+    var score = $('<h2>',{id: 'score'});
     
     var numCorrect = 0;
     for (var i = 0; i < selections.length; i++) {
